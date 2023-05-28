@@ -29,11 +29,6 @@ const config = (): Configuration => {
           },
         },
         {
-          test: /\.(ts|tsx)$/,
-          exclude: /node_modules/,
-          use: "ts-loader",
-        },
-        {
           test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
           type: "asset",
           parser: {
@@ -73,6 +68,7 @@ const config = (): Configuration => {
         },
       ],
     },
+    devtool: "inline-source-map",
     resolve: {
       extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
       // absolute import paths
