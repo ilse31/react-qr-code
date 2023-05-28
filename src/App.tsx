@@ -1,11 +1,12 @@
 import React from "react";
 type Props = {};
 import "./App.css";
+import Routed from "./routes/Routes";
 
 const App = (props: Props) => {
   return (
-    <div className='bg-blue-700 h-screen'>
-      <p className="text-white">@tailwind base; @tailwind components; @tailwind utilities;</p>
+    <div>
+      <Routed />
     </div>
   );
 };

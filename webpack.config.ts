@@ -29,6 +29,11 @@ const config = (): Configuration => {
           },
         },
         {
+          test: /\.(ts|tsx)$/,
+          exclude: /node_modules/,
+          use: "ts-loader",
+        },
+        {
           test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
           type: "asset",
           parser: {
