@@ -5,9 +5,9 @@ import Routed from "./routes/Routes";
 
 const App = (props: Props) => {
   return (
-    <div>
+    <>
       <Routed />
-    </div>
+    </>
   );
 };
 
