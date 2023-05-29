@@ -5,7 +5,7 @@ import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpackDevServer from "webpack-dev-server";
 
-const IMAGE_SIZE_LIMIT = 10_000;
+const IMAGE_SIZE_LIMIT = 10000000;
 
 const config = (): Configuration => {
   return {
