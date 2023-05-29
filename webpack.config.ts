@@ -1,8 +1,9 @@
 import path from "path";
-import { Configuration } from "webpack";
+import { Configuration, webpack } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import webpackDevServer from "webpack-dev-server";
 
 const IMAGE_SIZE_LIMIT = 10_000;
 
@@ -15,6 +16,11 @@ const config = (): Configuration => {
       filename: "[name].js",
       chunkFilename: "static/js/[name].[ext]",
       assetModuleFilename: "static/media/[name].[ext]",
+    },
+    devServer: {
+      compress: true,
+      port: 3000,
+      historyApiFallback: true,
     },
     module: {
       rules: [
