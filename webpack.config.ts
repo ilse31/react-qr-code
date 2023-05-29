@@ -92,6 +92,9 @@ const config = (): Configuration => {
         chunkFilename: "static/css/[name].[contenthash:8].chunk.css",
       }),
     ],
+    performance: {
+      hints: false,
+    },
     optimization: {
       minimize: true,
       splitChunks: {
